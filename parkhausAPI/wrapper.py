@@ -1,8 +1,8 @@
 
 import requests
-from parkhaus import Parkhaus
+from .parkhaus import Parkhaus
 from bs4 import BeautifulSoup, SoupStrainer
-from requestAssistant import RequestHeaderGenerator
+from .requestAssistant import RequestHeaderGenerator
 
 
 class ParkhausWrapper:
@@ -142,7 +142,3 @@ class ParkhausWrapper:
         attrs = vars(obj)
         for key in attrs:
             print("%s : %s" %(key, attrs[key]))
-
-
-pw = ParkhausWrapper()
-pw.main()
