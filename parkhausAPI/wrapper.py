@@ -286,7 +286,7 @@ class ParkhausWrapper:
             "operator": operator
         }
 
-    def getInfo(self, name, soup=True, content=True):
+    def getInfo(self, name, spots=True, content=True):
         """
         public method starts the process of getting the soup, parsing it
         and creating the parkhaus object
