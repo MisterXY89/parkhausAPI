@@ -13,7 +13,7 @@ class RequestHeaderGenerator:
     """
 
     def __init__(self):
-        self.userAgentFile = join(dirname(__file__), 'files/userAgentList.txt')
+        self.userAgentFile = join(dirname(__file__), 'userAgentList.txt')
         self.langCodes = ['en-US,en', 'de-DE,de', 'en-GB,en', 'fr-FR,fr']
 
     def _buildRequestHeader(self, ua, lang):
