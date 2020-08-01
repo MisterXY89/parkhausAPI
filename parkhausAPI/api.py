@@ -17,6 +17,10 @@ class API:
 
     def getInfo(self, name, spots=True, content=True):
         """
+        calls getInfo on wrapper:
+        starts the process of getting the soup, parsing it
+        and creating the parkhaus object
+
         Parameters
         ----------
         name : str
@@ -43,10 +47,10 @@ class API:
 
     def getPlaces(self):
         """
-        Getter
+        Get all car park names and their corresponding codes/ids/int
 
         Return
         ----------
-        list, places
+        dict, places
         """
         return self.wrapper.getPlaces()
