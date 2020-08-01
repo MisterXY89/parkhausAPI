@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='parkhausAPI',
-    version='0.2.0',
+    version='0.1.0',
     description='Wrapper for car parks live data in Constance ',
     url='https://github.com/MisterXY89/parkhausAPI',
     author='Tilman Kerl',
