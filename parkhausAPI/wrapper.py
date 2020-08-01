@@ -56,7 +56,7 @@ class ParkhausWrapper:
             print(f'Something went wrong. Got the following response code: {response.status_code}')
             return None, response.status_code
 
-    def _parse(self, soup):
+    def _parse(self, soup, soup=True, content=True):
         baseContent = soup.findAll("p", class_ = self.baseContentSelector)[::-1][1]
         spotsTable = soup.findAll("table", class_ = self.spotsTableSelector)[0]
         imageUrl = self._parseImage(soup)
@@ -132,6 +132,14 @@ class ParkhausWrapper:
             "address": address,
             "operator": operator
         }
+
+    def getInfo(self, name, soup=True, content=True):
+        soup, status = self._getSoup("Döbele")
+        if status != 200:
+            return status
+        res = self._parse(soup, soup=soup, content=content)
+        obj = self._createObject(res)
+        return obj
 
     def main(self):
         soup, status = self._getSoup("Döbele")
