@@ -160,6 +160,8 @@ class ParkhausWrapper:
         ----------
         dict, containing spots and content (image is part of content)
         """
+        # TODO:
+        # IndexError: list index out of range (-> not found)
         baseContent = soup.findAll("p", class_ = self.__baseContentSelector)[::-1][1]
         spotsTable = soup.findAll("table", class_ = self.__spotsTableSelector)[0]
         imageUrl = self._parseImage(soup)
