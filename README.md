@@ -3,8 +3,8 @@ All necessary info will be explained in this README. For further info about each
 have a look in the documented source files.
 
 ## Install
- - `pip install parkhausAPI`
  - clone and run `pip install .` in the root folder
+ - **Coming soon:** `pip install parkhausAPI`, pip package
 
 ### Dependencies of the packgage
 These will be installed when installing via pip
