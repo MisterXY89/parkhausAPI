@@ -312,6 +312,6 @@ class ParkhausWrapper:
         soup, status = self._getSoup("Döbele")
         if status != 200:
             return status
-        res = self._parse(soup, soup=soup, content=content)
+        res = self._parse(soup, spots=soup, content=content)
         obj = self._createObject(res)
         return obj
