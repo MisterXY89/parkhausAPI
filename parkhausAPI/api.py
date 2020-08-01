@@ -1,5 +1,5 @@
 
-from .wrapper import *
+from .wrapper import ParkhausWrapper
 
 class API:
     """
