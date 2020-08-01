@@ -2,6 +2,8 @@
 All necessary info will be explained in this README. For further info about each class,
 have a look in the documented source files.
 
+**WORK IN PROGRESS**: so there might still be a few errors, please report them if you finde some :D
+
 ## Install
  - clone and run `pip install .` in the root folder
  - **Coming soon:** `pip install parkhausAPI`, pip package
