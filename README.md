@@ -1,9 +1,11 @@
 # Wrapper for car parks live data in Constance
 
 ## Install
-`pip install parkhausAPI`
+ - `pip install parkhausAPI`
+ - clone and run `pip install .` in the root folder
 
-### Dependencies:
+### Dependencies of the packgage
+These will be installed when installing via pip
 ```
 bs4
 numpy
@@ -16,12 +18,16 @@ lxml
 from parkhausAPI import API
 api = API()
 
-# list all places
+# list all places / returns a dict
 api.getPlaces()
 
 # get information about a specific car park
 api.getInfo("Altstadt") # code works as well
-# returns a Parkhaus Object:
+# returns the same as:
+api.getInfo(107845)
+
+# both return a Parkhaus Object
+# -> See following section
 
 ```
 
@@ -31,8 +37,8 @@ The following attributes are parsed:
 entry         : where the entry to the car park is
 openingHours  : opening hours of the car park
 hightLimit    : empty if none
-address       :
-operator      :
+address       : street, housenr and postal code
+operator      : address and name of the car house operator
 spots         : total number of available spots
 freeSpots     : free spots
 occupiedSpots : occupied spots
