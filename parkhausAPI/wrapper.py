@@ -133,7 +133,7 @@ class ParkhausWrapper:
             return None, err
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, "lxml")
-            print(f"OK! Url: {url}")
+            # print(f"OK! Url: {url}")
             return soup, 200
         else:
             print(f'Something went wrong. Got the following response code: {response.status_code}')
@@ -312,6 +312,6 @@ class ParkhausWrapper:
         soup, status = self._getSoup("Döbele")
         if status != 200:
             return status
-        res = self._parse(soup, spots=soup, content=content)
+        res = self._parse(soup, spots=spots, content=content)
         obj = self._createObject(res)
         return obj
