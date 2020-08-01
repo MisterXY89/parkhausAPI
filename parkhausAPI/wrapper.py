@@ -92,11 +92,11 @@ class ParkhausWrapper:
 
     def getPlaces(self):
         """
-        Getter
+        Get all car park names and their corresponding codes/ids/int
 
         Return
         ----------
-        list, places
+        dict, places
         """
         return self.__places
 
