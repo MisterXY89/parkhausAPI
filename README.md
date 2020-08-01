@@ -1,4 +1,6 @@
 # Wrapper for car parks live data in Constance
+All necessary info will be explained in this README. For further info about each class,
+have a look in the documented source files.
 
 ## Install
  - `pip install parkhausAPI`
@@ -42,8 +44,34 @@ api.getInfo(107845)
 
 # both return a Parkhaus Object
 # -> See following section
-
 ```
+
+### getPlaces()
+**What** <br>
+Get all car park names and their corresponding codes/ids/int  <br>
+**Return** <br>
+dict, places
+
+### getInfo(name: str)
+**What** <br>
+calls getInfo on wrapper:
+starts the process of getting the soup, parsing it
+and creating the parkhaus object <br>
+**Parameters** <br>
+name : str
+    name of the car park <br>
+| maybe:
+name : int
+    code of the car park <br>
+| maybe:
+spots : bool
+    parse spots? <br>
+| maybe:
+content : bool
+    parse content? <br>
+
+**Return** <br>
+Parkhaus object with all infos
 
 ## Parkhaus Object
 The Parkhaus class has the following attributes:
