@@ -311,7 +311,7 @@ class ParkhausWrapper:
         ----------
         parkhaus object with all infos
         """
-        soup, status = self._getSoup("Döbele")
+        soup, status = self._getSoup(name)
         if status != 200:
             return status
         res = self._parse(soup, spots=spots, content=content)
